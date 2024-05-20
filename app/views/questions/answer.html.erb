@@ -1,0 +1,22 @@
+<div class="container">
+  <h1 class="display-4 text-center">Stupid Coaching</h1>
+
+  <div class="d-flex flex-column">
+    <div class="border-start border-2 border-secondary ps-2 mb-2">
+      <p>I am going to work</p>
+      <p><small>-You</small></p>
+    </div>
+    <div class="bg-warning p-2 rounded mb-2 " style="background-color: #fff3cd;">
+      <% if params[:question] == "I am going to work" %>
+        <p>Great!</p>
+      <% elsif params[:question].include?('?') %>
+        <p>Get dressed and go to work!</p>
+      <% else %>
+        <p>I don't care, get dressed and go to work!</p>
+      <% end %>
+      <p><small>-Your coach</small></p>
+    </div>
+
+    <a href="./ask" class="btn btn-primary" role="button">Ask a new question</a>
+  </div>
+</div>
